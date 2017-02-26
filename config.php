@@ -15,8 +15,6 @@ $CONFIG = array(
 
 'overwritehost' => '$DOMAIN',
 
-'singleuser' => true,
-
 'updatechecker' => false,
 
 );
