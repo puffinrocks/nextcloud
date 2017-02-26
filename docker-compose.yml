@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+
+    main:
+        image: puffinrocks/nextcloud:latest
+        ports: 
+            - 80
+        environment:
+            - VIRTUAL_HOST
+            - VIRTUAL_PORT=80
+        networks:
+            - front
+            - back
+            - default
+        volumes: 
+            - main_apps:/var/www/html/apps
+            - main_config:/var/www/html/config
+            - main_data:/var/www/html/data
+        tmpfs:
+            - /tmp
+            - /run
+
+volumes:
+    main_apps:
+    main_config:
+    main_data:
+
+networks:
+    front:
+        external:
+            name: "puffin_front"
+    back:
+        external:
+            name: "puffin_back"
