@@ -17,16 +17,12 @@ services:
             - back
             - default
         volumes: 
-            - main_apps:/var/www/html/apps
-            - main_config:/var/www/html/config
-            - main_data:/var/www/html/data
+            - main_data:/var/www/html
         tmpfs:
             - /tmp
             - /run
 
 volumes:
-    main_apps:
-    main_config:
     main_data:
 
 networks:
