@@ -4,7 +4,7 @@ services:
 
     main:
         image: puffinrocks/nextcloud:latest
-        ports: 
+        ports:
             - 80
         environment:
             - VIRTUAL_HOST
@@ -16,7 +16,7 @@ services:
             - front
             - back
             - default
-        volumes: 
+        volumes:
             - main_data:/var/www/html
         tmpfs:
             - /tmp

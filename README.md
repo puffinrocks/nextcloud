@@ -1,4 +1,4 @@
-# Nextcloud 
+# Nextcloud
 _a safe home for all your data_
 
 https://nextcloud.com/
